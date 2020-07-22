@@ -11,17 +11,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        printSum(-1, 8)
+
         tx = findViewById(R.id.main_text)
 
+        TestPrint.setTextView(tx);
         val test : KotlinTest = KotlinTest(1)
+        printSum(-1, 8)
 
+        val dispatchTest : DispatchTest = DispatchTest()
+        dispatchTest.test();
     }
 
     fun printSum(a: Int, b: Int) {
-        println("sum of $a and $b is ${a + b}")
+        TestPrint.println("sum of $a and $b is ${a + b}")
         val list = asList(1, 2, 3, 4, 5, 6, 7, b = 11)
-        println(list)
+        TestPrint.println(list.toString())
     }
 
     fun asList(vararg ts: Int, a: Int = 99, b: Int): List<Int> {

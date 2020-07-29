@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         val dispatchTest : DispatchTest = DispatchTest()
         dispatchTest.test();
+
+        test()
     }
 
     fun printSum(a: Int, b: Int) {

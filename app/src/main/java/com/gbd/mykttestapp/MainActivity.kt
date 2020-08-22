@@ -21,6 +21,13 @@ class MainActivity : AppCompatActivity() {
         val dispatchTest : DispatchTest = DispatchTest()
         dispatchTest.test();
 
+        var rectangle : Rectangle = Rectangle()
+        rectangle.getNameTest()
+        printClassName(rectangle)
+
+        val list = mutableListOf(1, 2, 3)
+        list.swap(0, 2)
+
         test()
     }
 
